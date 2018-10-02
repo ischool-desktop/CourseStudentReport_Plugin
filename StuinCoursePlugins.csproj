@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F834A37D-ABB4-4B8A-88B6-5B8420C1B1C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StuinCoursePlugins</RootNamespace>
+    <AssemblyName>StuinCoursePlugins</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells_201402, Version=7.7.1.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Aspose.Cells_201402.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA, Version=2.1.1.22, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Authentication, Version=1.9.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Authentication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAClient, Version=1.0.1.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.DSAClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAUtil, Version=3.9.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.DSAUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Permission, Version=1.2.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Permission.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Presentation, Version=1.1.0.19, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\FISCA.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Framework, Version=1.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool, Version=1.0.3.7, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JHSchool.Data, Version=2.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\JHSchool.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Data, Version=2.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\K12.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SmartSchool.Customization.PlugIn, Version=1.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\SmartSchool.Customization.PlugIn.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbon\CourseStudentList\CourseStudentList.cs" />
+    <Compile Include="Ribbon\CourseStudentList\TCInstruct.cs" />
+    <Compile Include="Ribbon\CourseStudentList\TCInstructRecord.cs" />
+    <Compile Include="Ribbon\CourseStudentList\TCInstruct_ExtendMethods.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library\Aspose.Cells.dll" />
+    <Content Include="Library\Aspose.Cells.xml" />
+    <Content Include="Library\Aspose.Cells_201402.dll" />
+    <Content Include="Library\Aspose.Cells_201402.xml" />
+    <Content Include="Library\FISCA.Authentication.dll" />
+    <Content Include="Library\FISCA.Authentication.pdb" />
+    <Content Include="Library\FISCA.Authentication.xml" />
+    <Content Include="Library\FISCA.dll" />
+    <Content Include="Library\FISCA.DSAClient.dll" />
+    <Content Include="Library\FISCA.DSAClient.pdb" />
+    <Content Include="Library\FISCA.DSAClient.xml" />
+    <Content Include="Library\FISCA.DSAUtil.dll" />
+    <Content Include="Library\FISCA.DSAUtil.pdb" />
+    <Content Include="Library\FISCA.DSAUtil.xml" />
+    <Content Include="Library\FISCA.pdb" />
+    <Content Include="Library\FISCA.Permission.dll" />
+    <Content Include="Library\FISCA.Permission.pdb" />
+    <Content Include="Library\FISCA.Permission.xml" />
+    <Content Include="Library\FISCA.Presentation.dll" />
+    <Content Include="Library\FISCA.Presentation.pdb" />
+    <Content Include="Library\FISCA.xml" />
+    <Content Include="Library\Framework.dll" />
+    <Content Include="Library\Framework.pdb" />
+    <Content Include="Library\JHSchool.Data.dll" />
+    <Content Include="Library\JHSchool.Data.pdb" />
+    <Content Include="Library\JHSchool.Data.xml" />
+    <Content Include="Library\JHSchool.dll" />
+    <Content Include="Library\K12.Data.dll" />
+    <Content Include="Library\K12.Data.pdb" />
+    <Content Include="Library\K12.Data.xml" />
+    <Content Include="Library\SmartSchool.Customization.PlugIn.dll" />
+    <Content Include="Library\SmartSchool.Customization.PlugIn.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\課程修課學生清單.xls" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
